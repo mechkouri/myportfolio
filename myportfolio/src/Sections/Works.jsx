@@ -1,5 +1,5 @@
 
-import Project from "./Project"
+import Project from "../components/Project"
 import useFetch from '../hooks/useFetch';
 import { useEffect, useState } from 'react';
 import Slider from 'react-slick';

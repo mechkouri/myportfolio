@@ -23,7 +23,7 @@ const About = () => {
         threshold: 0.5,
     })
     return (
-        <div className="section mt-[50px] pt-1" id="about" ref={ref} >
+        <section className="section mt-[50px] pt-1" id="about" ref={ref} >
             {loading ? "loading ..." : desc.map(desc => (
                 <div className="container  pt-[20px] lg:mt-0 lg:pt-0  mx-auto " key={desc.id}>
                     <div className="flex  gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 lg:h-screen">
@@ -79,7 +79,7 @@ const About = () => {
                     </div>
                 </div>
             ))}
-        </div>
+        </section>
     )
 }
 

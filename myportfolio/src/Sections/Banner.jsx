@@ -1,9 +1,7 @@
-
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
-import Profils from './Profils'
-import SocialMedia from './SocialMedia'
 import { Link } from 'react-scroll'
+import { Profils, SocialMedia } from '../components'
 
 
 
@@ -40,13 +38,13 @@ const Banner = ({ information }) => {
                         </motion.div>
 
 
-                        <motion.div variants={fadeIn('down', 0.3)} initial='hidden' whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className="flex text-[20px]  lg:text-[30px] gap-x-6 max-w-max mx-auto lg:mx-0 ">
+                        <motion.div variants={fadeIn('down', 0.3)} initial='hidden' whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className=" hidden lg:flex text-[20px]  lg:text-[30px] gap-x-6 max-w-max mx-auto lg:mx-0 ">
                             <SocialMedia />
                         </motion.div>
 
                     </div>
                     <motion.div variants={fadeIn('down', 0.5)} initial='hidden' whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className=" lg:flex  flex-1 max-w-[200px] lg:max-w-[330px] m-auto lg:m-0 lg:max-x-[482px] " id='profil-img'>
-                        <img src={information.attributes.profilImage.data.attributes.url} alt={information.attributes.lastName} loading="lazy" />
+                        <img src={information.attributes.profilImage.data.attributes.url} alt={information.attributes.lastName}  />
                     </motion.div>
                 </div>
 

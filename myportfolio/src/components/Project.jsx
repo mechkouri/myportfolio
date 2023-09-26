@@ -5,7 +5,7 @@ const Project = ({project}) => {
   return (
     <div style={{ display: 'grid !important' }} className="group relative w-auto overflow-hidden border-2 border-white/50 rounded-xl mr-0 lg:mr-10 z-50">
     <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300 "></div>
-    <img src={project.attributes.image.data[0].attributes.url} loading="lazy" className="group-hover:scale-125 transition-all duration-500" alt={project.attributes.title} />
+    <img src={project.attributes.image.data[0].attributes.url}  className="group-hover:scale-125 transition-all duration-500" alt={project.attributes.title} />
     <div className="absolute -bottom-full left-2  lg:left-12 group-hover:bottom-24 transition-all duration-300 z-50 ">
        <span className="text-gradient text-[16px] ">{project.attributes.type}</span> 
     </div>

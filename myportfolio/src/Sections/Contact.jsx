@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
-import Notification from "./Notification"; 
+import { Notification } from "../components";
+
 
 const Contact = () => {
   const form = useRef();

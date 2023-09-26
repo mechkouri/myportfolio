@@ -1,7 +1,7 @@
 
 import { Route, Routes, BrowserRouter as Router, NavLink } from 'react-router-dom';
-import Experience from './Experience';
-import Education from './Education';
+import { Education, Experience } from '../components';
+
 
 
 

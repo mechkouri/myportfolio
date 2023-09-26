@@ -1,7 +1,9 @@
 
-import { About, Banner, Contact, Error, Footer, Header, Loading, Navbar, Services, Skills, Works } from "./components"
+
 import { useEffect, useState } from "react"
 import useFetch from "./hooks/useFetch";
+import { Error, Loading } from "./components";
+import { About, Banner, Contact, Footer, Header, Navbar, Services, Skills, Works } from "./Sections";
 
 
 
