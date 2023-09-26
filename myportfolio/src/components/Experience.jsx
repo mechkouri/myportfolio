@@ -23,7 +23,7 @@ const Experience = () => {
         <p className={` text-center`}>
           What I have done so far
         </p>
-        <h2 className='h2 leading-tight text-accent text-center'>
+        <h2 className='h3 lg:h2 leading-tight text-accent text-center'>
           Work Experience.
         </h2>
       </motion.div>

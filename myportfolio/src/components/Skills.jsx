@@ -21,9 +21,9 @@ const Skills = () => {
                         <h2 className="h2 leading-tight text-accent">
                             My Latest <br /> skills.
                         </h2>
-                        <p className="max-w-[600px] mb-16">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Minus porro quis voluptatum vitae maiores reprehenderit.
+                        <p className="max-w-[600px] mb-4 lg:mb-16">
+                        I'm fluent in a range of technologies and methodologies,
+                         and I'm dedicated to staying at the forefront of industry trends.
                         </p>
                     </div>
 

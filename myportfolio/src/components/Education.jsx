@@ -15,16 +15,15 @@ const Education = ( ) => {
 
   useEffect(()=>{
       data && setEducation(data)
-      console.log(education)
      },[data])
     return (
       <>
         <motion.div variants={textVariant()} >
-          <p className={` text-center`}>
+          <p className="text-center" >
             What I have done so far
           </p>
-          <h2 className='h2 leading-tight text-accent text-center'>
-            Work Experience.
+          <h2 className='h3 lg:h2 leading-tight text-accent text-center'>
+            cursus académique.
           </h2>
         </motion.div>
   

@@ -22,12 +22,12 @@ const Banner = ({ information }) => {
                             <span className=' text-white mr-4 '>I am a</span>
                             <Profils />
                         </motion.div>
-                        <motion.p variants={fadeIn('up', 0.5)} initial='hidden' whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className='mb-8 max-w-lg mx-auto lg:mx-0'>
+                        <motion.p variants={fadeIn('up', 0.5)} initial='hidden' whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className='mb-4 lg:mb-8 max-w-lg mx-auto lg:mx-0'>
 
                             {information.attributes.description}
 
                         </motion.p>
-                        <motion.div variants={fadeIn('up', 0.6)} initial='hidden' whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0 ">
+                        <motion.div variants={fadeIn('up', 0.6)} initial='hidden' whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className="flex max-w-max gap-x-6 items-center mb-6 lg:mb-12 mx-auto lg:mx-0 ">
                         <Link
                                 to="contact"
                                 activeClass="active"
@@ -40,12 +40,12 @@ const Banner = ({ information }) => {
                         </motion.div>
 
 
-                        <motion.div variants={fadeIn('up', 0.7)} initial='hidden' whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className="flex text-[20px]  lg:text-[30px] gap-x-6 max-w-max mx-auto lg:mx-0 ">
+                        <motion.div variants={fadeIn('down', 0.3)} initial='hidden' whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className="flex text-[20px]  lg:text-[30px] gap-x-6 max-w-max mx-auto lg:mx-0 ">
                             <SocialMedia />
                         </motion.div>
 
                     </div>
-                    <motion.div variants={fadeIn('down', 0.5)} initial='hidden' whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className=" lg:flex  flex-1 max-w-[250px] lg:max-w-[330px] m-auto lg:m-0 lg:max-x-[482px] " id='profil-img'>
+                    <motion.div variants={fadeIn('down', 0.5)} initial='hidden' whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className=" lg:flex  flex-1 max-w-[200px] lg:max-w-[330px] m-auto lg:m-0 lg:max-x-[482px] " id='profil-img'>
                         <img src={information.attributes.profilImage.data.attributes.url} alt={information.attributes.lastName} loading="lazy" />
                     </motion.div>
                 </div>

@@ -23,24 +23,24 @@ const About = () => {
         threshold: 0.5,
     })
     return (
-        <div className="section" id="about" ref={ref} >
+        <div className="section mt-[50px] pt-1" id="about" ref={ref} >
             {loading ? "loading ..." : desc.map(desc => (
-                <div className="container mt-[50px] lg:mt-0  mx-auto " key={desc.id}>
+                <div className="container  pt-[20px] lg:mt-0 lg:pt-0  mx-auto " key={desc.id}>
                     <div className="flex  gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 lg:h-screen">
                         <motion.div variants={fadeIn('right', 0.3)} initial='hidden' whileInView={'show'} viewport={{ once: false, amount: 0.3 }} className="hidden lg:flex flex-1 bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top">
 
                         </motion.div>
                         <motion.div variants={fadeIn('left', 0.5)} initial='hidden' whileInView={'show'} viewport={{ once: false, amount: 0.3 }} className="flex-1">
                             <h2 className="h2 text-accent">About me.</h2>
-                            <h3 className="h3 mb-4">
+                            <h3 className="h3  mb-2 lg:mb-4">
                                 {desc.attributes.title}
                             </h3>
-                            <p className="mb-6">
+                            <p className="mb-2 lg:mb-6">
                                 {desc.attributes.description}
                             </p>
-                            <div className="flex gap-x-6 lg:gap-x-10 mb-12">
+                            <div className="flex gap-x-6 lg:gap-x-10 mb-6 lg:mb-12">
                                 <div className="">
-                                    <div className="text-[40px] font-tertiary text-gradient mb-2 ">
+                                    <div className="text-[30px] lg:text-[40px] font-tertiary text-gradient mb-2 ">
                                         + {inView ? <CountUp start={0} end={desc.attributes.moisExperience} duration={3} /> : null}
                                     </div>
                                     <div className="font-primary text-sm tracking-[2px]">
@@ -48,7 +48,7 @@ const About = () => {
                                     </div>
                                 </div>
                                 <div className="">
-                                    <div className="text-[40px] font-tertiary text-gradient mb-2 ">
+                                    <div className="text-[30px] lg:text-[40px] font-tertiary text-gradient mb-2 ">
                                         {inView ? <CountUp start={0} end={desc.attributes.projectsCompleted} duration={3} /> : null}
                                     </div>
                                     <div className="font-primary text-sm tracking-[2px]">
@@ -56,7 +56,7 @@ const About = () => {
                                     </div>
                                 </div>
                                 <div className="">
-                                    <div className="text-[40px] font-tertiary text-gradient mb-2 ">
+                                    <div className="text-[30px] lg:text-[40px] font-tertiary text-gradient mb-2 ">
                                         + {inView ? <CountUp start={0} end={desc.attributes.coursCompleted} duration={3} /> : null}
                                     </div>
                                     <div className="font-primary text-sm tracking-[2px]">

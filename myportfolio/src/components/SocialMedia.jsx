@@ -15,26 +15,27 @@ const SocialMedia = () => {
 
   return (
     <>
-    {loading ? "loading ..." : urls.map(url => (<>
+    {loading ? "loading ..." : urls.map(url => (
+        <div  className='flex flex-row space-x-6' key={url.id}>
                 <a href={url.attributes.githubeURL} target="_blank" rel="noopener noreferrer">
-                <FaGithub />
+                <FaGithub strokeWidth={0}  />
                 </a>
                 <a href={url.attributes.linkedinURL} target="_blank" rel="noopener noreferrer">
-                <FaLinkedin />
+                <FaLinkedin strokeWidth={0} />
                 </a>
                 <a href={url.attributes.twitterURL} target="_blank" rel="noopener noreferrer">
-                    <FaTwitter />
+                    <FaTwitter strokeWidth={0} />
                 </a>
                 <a href={url.attributes.whatssapURL} target="_blank" rel="noopener noreferrer">
-                    <FaWhatsapp />
+                    <FaWhatsapp strokeWidth={0}  />
                 </a>
                 <a href={url.attributes.emailURL} target="_blank" rel="noopener noreferrer">
-                    <FaRegEnvelope />
+                    <FaRegEnvelope strokeWidth={0} />
                 </a>
                 <a href={url.attributes.phoneURL} target="_blank" rel="noopener noreferrer">
-                    <FaPhone />
+                    <FaPhone strokeWidth={0} />
                 </a>
-        </>
+                </div>
         ))}
       </>
   )

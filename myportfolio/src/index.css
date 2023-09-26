@@ -124,6 +124,28 @@
 
 }
 
+.slick-slider .slick-arrow:before {
+  color: #333;
+  font-size: 2rem;
+}
+
+.slick-slider .slick-dots button:before {
+  font-size: 1.5rem;
+  color: #b80b88;
+}
+
+.slick-slider .slick-dots li.slick-active button::before {
+  color: #b80b88;
+}
+.slick-slider .slick-dots {
+  bottom: -44px;
+}
+
+.slick-slider .slick-dots li {
+  margin: 0 0.5rem;
+}
+
+
 @layer base {
   body {
     @apply font-secondary text-lg leading-8 text-white;

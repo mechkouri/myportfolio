@@ -8,20 +8,17 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollHeight =
-        document.documentElement.scrollHeight ||
-        document.body.scrollHeight;
-      const scrollTop =
-        document.documentElement.scrollTop || document.body.scrollTop;
-      const clientHeight =
-        document.documentElement.clientHeight || window.innerHeight;
+      const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const clientHeight = document.documentElement.clientHeight || window.innerHeight;
 
-      // Check if the user has scrolled to the bottom of the page
-      if (scrollHeight - scrollTop === clientHeight) {
-        setIsHidden(true);
-      } else {
-        setIsHidden(false);
-      }
+      // Calculate the scroll position relative to the total scrollable height
+      const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100;
+
+      // Adjust this value based on when you want the navbar to appear
+      const thresholdPercentage = 96; // Change this value as needed
+
+      setIsHidden(scrollPercentage >= thresholdPercentage);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -31,11 +28,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={`fixed bottom-2 lg:bottom-8 w-full overflow-hidden z-50 ${
-        isHidden ? "hidden" : "container mx-auto"
-      }`}
-    >
+    <nav className={`fixed bottom-2 lg:bottom-8 w-full overflow-hidden z-50 ${isHidden ? "hidden" : "container mx-auto"}`}>
       <div className="w-full bg-black/20 h-[96px] backdrop-blur-2x1 rounded-full max-w-[460px] items-center mx-auto px-5 flex justify-between text-2xl text-white/50">
         <Link
           to="home"
@@ -45,7 +38,7 @@ const Navbar = () => {
           offset={-200}
           className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
         >
-          <BiHomeAlt />
+          <BiHomeAlt strokeWidth={0}  />
         </Link>
         <Link
           to="about"
@@ -63,7 +56,7 @@ const Navbar = () => {
           spy={true}
           className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
         >
-          <BsClipboardData />
+          <BsClipboardData strokeWidth={0}  />
         </Link>
         <Link
           to="works"
@@ -72,7 +65,7 @@ const Navbar = () => {
           spy={true}
           className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
         >
-          <BsBriefcase />
+          <BsBriefcase strokeWidth={0} />
         </Link>
         <Link
           to="contact"
@@ -81,7 +74,7 @@ const Navbar = () => {
           spy={true}
           className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
         >
-          <BsChatSquare />
+          <BsChatSquare strokeWidth={0} />
         </Link>
       </div>
     </nav>
